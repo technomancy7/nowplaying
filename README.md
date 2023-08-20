@@ -16,3 +16,8 @@ python3 nowplaying.py [--delay DELAY] [--player PLAYER] [--client CLIENT]
 Delay is the number of seconds between calls to MPRIS, *not* Discord. Discord is updated whenever the script detects a change in MPRIS.
 Player is the ID of the player. You can list all available players by running `playerctl -l`.
 Client is the discord client ID of the app which is used to connect to their API. It uses mine by default, but you can change it to your own.
+
+## Requirements
+Probably only works on Linux, but I haven't tested on Windows as I don't have a Windows system.
+Needs Python to run it, and the pypresence library installed through pip.
+Also needs the `playerctl` binary available in PATH, which should be installable through the Linux package manager of your choice.
