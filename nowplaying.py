@@ -6,7 +6,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--delay', type=int, default=5, help='Delay value')
 parser.add_argument('--player', type=str, default="firefox", help='Player name to detect')
-parser.add_argument('--client', type=int, default=0, help='Discord client ID')
+parser.add_argument('--client', type=int, default=1142046335017685072, help='Discord client ID')
 args = parser.parse_args()
 delay = args.delay
 player = args.player
