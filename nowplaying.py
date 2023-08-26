@@ -6,13 +6,15 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--delay', type=int, default=5, help='Delay value')
 parser.add_argument('--player', type=str, default="firefox", help='Player name to detect')
+parser.add_argument('--icon', type=str, default="", help='Icon to use. [Currently supported: kde, firefox, chromium, vlc]')
 parser.add_argument('--client', type=int, default=1142046335017685072, help='Discord client ID')
 args = parser.parse_args()
 delay = args.delay
 player = args.player
+icon = args.icon
 client_id = args.client
 
-print(f"Connecting to discord via {client_id} / DELAY {delay} / PLAYER {player}")
+print(f"Connecting to discord via {client_id} / DELAY {delay} / PLAYER {player} / ICON {icon}")
 RPC = Presence(client_id)  # Initialize the client class
 RPC.connect() # Start the handshake loop
 
@@ -28,7 +30,7 @@ while True:
         details = "No media playing"
         
     if details != last_details:
-        d = RPC.update(state=f"Playing in {player}", details=f"{details}", large_image="infinity", start=time.time(), buttons=[{"label": "Source", "url": "https://github.com/technomancy7/nowplaying.py"}])
+        d = RPC.update(state=f"Playing in {player}", details=f"{details}", large_image="infinity-transparent", small_image=icon, start=time.time(), buttons=[{"label": "Source", "url": "https://github.com/technomancy7/nowplaying.py"}])
         update = d['data']
         print(f"state update @ {update['name']}: {update['state']} / {update['details']}")
         last_details = details
