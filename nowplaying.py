@@ -28,7 +28,7 @@ while True:
         details = "No media playing"
         
     if details != last_details:
-        d = RPC.update(state=f"Playing in {player}", details=f"🎵 {details}")
+        d = RPC.update(state=f"Playing in {player}", details=f"{details}", start=time.time(), buttons=[{"label": "Source", "url": "https://github.com/technomancy7/nowplaying.py"}])
         update = d['data']
         print(f"state update @ {update['name']}: {update['state']} / {update['details']}")
         last_details = details
