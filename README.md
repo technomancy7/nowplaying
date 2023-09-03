@@ -10,7 +10,18 @@ Thanks to the MPRIS (Media Player Remote Interfacing Specification) protocol, th
 ## Usage
 
 ```sh
-python3 nowplaying.py [--delay DELAY] [--player PLAYER] [--client CLIENT]
+usage: nowplaying.py [-h] [--delay DELAY] [--fmt FMT] [--player PLAYER] [--displayer DISPLAYER] [--icon ICON] [--client CLIENT]
+
+options:
+  -h, --help            show this help message and exit
+  --delay DELAY         Delay value
+  --fmt FMT             playerctl format string
+  --player PLAYER       Player name to detect
+  --displayer DISPLAYER
+                        Player name to show to the client
+  --icon ICON           Icon to use. [Currently supported: kde, firefox, chromium, vlc]
+  --client CLIENT       Discord client ID
+
 ```
 
 Delay is the number of seconds between calls to MPRIS, *not* Discord. Discord is updated whenever the script detects a change in MPRIS.<br>
