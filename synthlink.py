@@ -35,7 +35,7 @@ while True:
         details = "No media playing"
         
     if details != last_details:
-        d = RPC.update(state=f"Playing in {displayer}", details=f"{details}", large_image="infinity-transparent", large_text="Designed by @_technomancer",  small_image=icon, small_text=displayer, start=time.time(), buttons=[{"label": "Source", "url": "https://github.com/technomancy7/nowplaying.py"}])
+        d = RPC.update(state=f"Playing in {displayer}", details=f"{details}", large_image="infinity-transparent", large_text="Designed by @_technomancer",  small_image=icon, small_text=displayer, start=time.time(), buttons=[{"label": "Source", "url": "https://github.com/technomancy7/synthlink"}])
         update = d['data']
         print(f"state update @ {update['name']}: {update['state']} / {update['details']}")
         last_details = details
