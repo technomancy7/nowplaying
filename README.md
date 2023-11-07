@@ -1,4 +1,4 @@
-# nowplaying
+# synthlink
 A simple python script to show your current playing media as a Discord.<br>
 ![2023-08-20_16-57](https://github.com/technomancy7/nowplaying/assets/34060097/279bdefd-a470-4bec-a2a1-dfdab9977c61)
 
@@ -10,7 +10,7 @@ Thanks to the MPRIS (Media Player Remote Interfacing Specification) protocol, th
 ## Usage
 
 ```sh
-usage: nowplaying.py [-h] [--delay DELAY] [--fmt FMT] [--player PLAYER] [--displayer DISPLAYER] [--icon ICON] [--client CLIENT]
+usage: synthlink.py [-h] [--delay DELAY] [--fmt FMT] [--player PLAYER] [--displayer DISPLAYER] [--icon ICON] [--client CLIENT]
 
 options:
   -h, --help            show this help message and exit
